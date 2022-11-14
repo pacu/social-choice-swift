@@ -312,8 +312,41 @@ extension Tournament {
 
 tournamentA.graphAsMatrix()
 
+
+/**
+
+ tournamentA.graphAsMatrix()
+ [
+ [0, 2, 6, 6, 6],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 4, 0],
+ [0, 0, 0, 0, 4],
+ [0, 0, 0, 0, 0]
+ ]
+ */
+
 tournamentA.preferenceMatrix()
+
+/**
+ tournamentA.preferenceMatrix() prints
+ [
+ [0, 2, 6, 6, 6],
+ [2, 0, 0, 0, 0],
+ [6, 0, 0, 4, 0],
+ [6, 0, 4, 0, 4],
+ [6, 0, 0, 4, 0]
+ ]
+ */
 
 
 tournamentA.dominion(of: Alternative("a"), over: Alternative("b")).forEach{ p in print(p.preferenceDescription)}
+/**
 
+ tournamentA.dominion(of: Alternative("a"), over: Alternative("b")).forEach{ p in print(p.preferenceDescription)} prints
+ 
+ a≻e≻c≻d≻b
+ e≻c≻d≻a≻b
+ a≻b≻c≻e≻d
+ d≻a≻c≻e≻b
+
+ */
